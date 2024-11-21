@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medify - Melanoma Detection</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Medify</h1>
+        <p>Your Reliable Skin Cancer Diagnosis Tool</p>
+    </header>
+
+    <main>
+        <section id="instructions">
+            <h2>How to Use</h2>
+            <ol>
+                <li>Upload a clear image of the affected skin area.</li>
+                <li>Provide your details in the form below.</li>
+                <li>Click on the "Submit" button and wait for the results.</li>
+            </ol>
+        </section>
+
+        <section id="form-section">
+            <h2>Patient Information</h2>
+            <form id="patient-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" min="1" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="image-upload">Upload Skin Image:</label>
+                <input type="file" id="image-upload" accept="image/*" required>
+
+                <button type="button" id="submit-button">Submit</button>
+            </form>
+        </section>
+
+        <section id="loading-bar-section">
+            <h2>Processing</h2>
+            <div id="loading-bar">
+                <div id="loading-progress"></div>
+            </div>
+        </section>
+
+        <section id="results">
+            <h2>Diagnosis Results</h2>
+            <div id="output"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Medify. All rights reserved.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+</html>
